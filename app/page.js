@@ -1,13 +1,12 @@
 import Image from "next/image";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 flex justify-center py-10 px-4 sm:px-6 lg:px-8">
-      <div className="bg-white shadow-lg rounded-lg p-8 max-w-4xl w-full">
+      <div className="bg-white shadow-2xl rounded-lg p-8 max-w-4xl w-full">
         {/* Profile Section */}
-        <div className="bg-pink-100 p-6 rounded-lg border border-neutral-200 mb-10">
+        <div className="bg-pink-100 p-6 rounded-3xl shadow-xl border border-neutral-200 mb-10">
           <div className="text-center">
             {/* Profile Picture */}
             <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden shadow-md border-4 border-gray-300">
@@ -20,7 +19,17 @@ export default function Home() {
             </div>
             {/* Name and Title */}
             <h1 className="text-3xl font-bold text-gray-800 mt-4">Theint Sandi Htet</h1>
-            <p className="text-lg text-gray-600">Thai Language Teacher</p>
+            <p className="text-lg text-gray-600">Thai Language Teacher
+            <span className="ml-2">
+              <Image
+                src="/thaiFlag.PNG"
+                alt="Thai Flag"
+                width={40}
+                height={20}
+                className="inline-block"
+              />
+            </span>
+            </p>
 
             {/* Social Links */}
             <div className="flex justify-center mt-4 space-x-6">
@@ -28,7 +37,8 @@ export default function Home() {
                 href="https://www.facebook.com/TSandi.htet"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:opacity-75"
+                aria-label="Facebook"
+                className="hover:text-pink-600"
               >
                 <i className="fab fa-facebook fa-2x"></i>
               </a>
@@ -36,21 +46,15 @@ export default function Home() {
                 href="https://www.instagram.com/whatsoeverrrr.tsh/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-pink-500 hover:opacity-75"
+                className=" hover:text-pink-500"
+                aria-label="Instagram"
               >
                 <i className="fab fa-instagram fa-2x"></i>
               </a>
-              {/* <a
-                href="https://line.me"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-green-500 hover:opacity-75"
-              >
-                <i className="fab fa-line fa-2x"></i>
-              </a> */}
               <a
-                href="mailto:somchai.teachthai@gmail.com"
-                className="text-red-600 hover:opacity-75"
+                href="mailto:tsandihtet20@gmail.com"
+                className="hover:text-pink-600"
+                aria-label="Email"
               >
                 <i className="fas fa-envelope fa-2x"></i>
               </a>
@@ -59,7 +63,7 @@ export default function Home() {
         </div>
 
         {/* About Section */}
-        <div className="bg-pink-100 p-6 rounded-lg border border-neutral-200 mb-10">
+        <div className="bg-pink-100 p-6 rounded-3xl shadow-xl border border-neutral-200 mb-10">
           <h2 className="text-2xl font-bold text-gray-800 mb-2">About</h2>
           <p className="text-gray-700 leading-relaxed">
             Experienced Thai language teacher with over 10 years of expertise
@@ -70,7 +74,7 @@ export default function Home() {
         </div>
 
         {/* Education Section */}
-        <div className="bg-pink-100 p-6 rounded-lg border border-neutral-200 mb-10">
+        <div className="bg-pink-100 p-6 rounded-3xl shadow-xl border border-neutral-200 mb-10">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Education History</h2>
           <ul className="space-y-4 text-gray-700 list-disc list-inside">
             <li>Sarasas Witaed Romklao School, Bangkok (2008-2012)</li>
@@ -79,7 +83,7 @@ export default function Home() {
         </div>
 
         {/* Work Experience Section */}
-        <div className="bg-pink-100 p-6 rounded-lg border border-neutral-200 mb-10">
+        <div className="bg-pink-100 p-6 rounded-3xl shadow-xl border border-neutral-200 mb-10">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Work Experience</h2>
           <ul className="space-y-4 text-gray-700">
             <li>
@@ -100,19 +104,18 @@ export default function Home() {
         </div>
 
         {/* Skills Section */}
-        <div className="bg-pink-100 p-6 rounded-lg border border-purple-300 mb-10">
+        <div className="bg-pink-100 p-6 rounded-3xl shadow-xl border border-neutral-200 mb-10">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Skills</h2>
-          <ul className="grid text-gray-700">
+          <ul className="grid grid-cols-2 gap-4 text-gray-700">
             <li>Thai Grammar and Phonetics</li>
             <li>Interactive Lesson Planning</li>
             <li>Cultural Integration in Lessons</li>
             <li>Fluent in Thai, English, and Chinese</li>
           </ul>
         </div>
-        
-          {/* Contact Section */}
-          {/* Contact Section */}
-        <div className="bg-pink-100 p-6 rounded-lg border border-pink-300 mt-10">
+
+        {/* Contact Section */}
+        <div className="bg-pink-100 p-6 rounded-3xl shadow-xl border border-neutral-200 mt-10">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Contact</h2>
           <p className="text-gray-700">
             <span className="font-bold">Phone:</span> +66-1234-5678
@@ -131,7 +134,6 @@ export default function Home() {
             Bangkok, Thailand
           </p>
         </div>
-
       </div>
     </div>
   );
