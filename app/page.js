@@ -11,7 +11,7 @@ export default function Home() {
             {/* Profile Picture */}
             <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden shadow-md border-4 border-gray-300">
               <Image
-                src="/person.webp"
+                src="/IMG_1674.jpg"
                 alt="Profile Picture"
                 fill
                 className="object-cover"
